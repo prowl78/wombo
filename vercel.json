@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "(?:www\\.)?wombomusical\\.com" }],
+      "destination": "https://www.knockknockwombo.com/:path*",
+      "permanent": true
+    }
+  ]
+}
