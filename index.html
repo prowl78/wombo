@@ -2,7 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Bundled Page</title>
+  <title>Musical Double Feature</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180.png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #faf9f5; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -309,6 +312,21 @@ document.addEventListener('DOMContentLoaded', async function() {
     // preserve ordering (React before ReactDOM before Babel before text/babel).
     const doc = new DOMParser().parseFromString(template, 'text/html');
     document.documentElement.replaceWith(doc.documentElement);
+    // Keep the site title and favicon after the unpacked page replaces <head>.
+    {
+      document.title = 'Musical Double Feature';
+      for (const el of Array.from(document.querySelectorAll('link[rel~="icon"], link[rel="apple-touch-icon"]'))) el.remove();
+      for (const [rel, sizes, href] of [
+        ['icon', '32x32', '/favicon/favicon-32.png'],
+        ['icon', '512x512', '/favicon/favicon-512.png'],
+        ['apple-touch-icon', '180x180', '/favicon/favicon-180.png'],
+      ]) {
+        const l = document.createElement('link');
+        l.rel = rel; l.sizes = sizes; l.href = href;
+        if (rel === 'icon') l.type = 'image/png';
+        document.head.appendChild(l);
+      }
+    }
 
     // Resolve page-frame markers: mint this document's own blob for each
     // framed page — from local text when this is the root, otherwise by

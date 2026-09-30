@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="22" fill="#aac90f"></rect>
-  <path d="M22 30 L35 72 L50 48 L65 72 L78 30" fill="none" stroke="#1a1209" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"></path>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#181009"/>
+  <g font-family="Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif" font-size="330" text-anchor="middle" paint-order="stroke" stroke-linejoin="round">
+    <text x="148" y="385" fill="#e5332a" stroke="#0d0804" stroke-width="20" transform="rotate(-6 148 250)">K</text>
+    <text x="345" y="400" fill="#f7c417" stroke="#c8261c" stroke-width="20" transform="rotate(5 345 265)">W</text>
+  </g>
 </svg>
