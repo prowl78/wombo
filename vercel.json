@@ -1,9 +1,15 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [{ "type": "host", "value": "(?:www\\.)?wombomusical\\.com" }],
-      "destination": "https://www.knockknockwombo.com/:path*",
+      "destination": "https://www.knockknockwombo.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+",
+      "has": [{ "type": "host", "value": "(?:www\\.)?wombomusical\\.com" }],
+      "destination": "https://www.knockknockwombo.com/:path+",
       "permanent": true
     }
   ]
