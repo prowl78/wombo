@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knock Knock · a one-act horror musical by bGame</title>
+<meta name="description" content="When you hear the knock, it's already too late. Knock Knock is a one-act horror musical by bGame, the first half of the Knock Knock + Wombo double feature.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Musical Double Feature">
+<meta property="og:title" content="Knock Knock: a one-act horror musical">
+<meta property="og:description" content="When you hear the knock, it's already too late.">
+<meta property="og:url" content="https://www.knockknockwombo.com/knock-knock/">
+<meta property="og:image" content="https://www.knockknockwombo.com/assets/kk-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shows.css">
+<style>
+  :root {
+    --bg: #0e0a09; --ink: #e9dcc6; --accent: #e0402a;
+    --grain: .22; --grain-blend: overlay;
+  }
+
+  /* The poster's top half, sitting in the dark like a lobby card. */
+  .hero { padding: 34px 0 0; background: radial-gradient(ellipse at 50% 30%, #2a0f0b 0%, #0e0a09 70%); }
+  .hero img { width: min(100%, 1024px); margin-inline: auto; box-shadow: 0 30px 80px rgba(0,0,0,.7); }
+  .credit { text-align: center; padding: 22px 16px 0; font: 15px/1.6 'Special Elite', 'Courier New', monospace;
+    letter-spacing: .06em; color: #b7a78a; }
+
+  /* The story, typed on a scrap of paper. */
+  .story { padding: 70px 0 90px; }
+  .note {
+    width: min(100% - 32px, 640px); margin-inline: auto; padding: 38px 34px 44px;
+    background: #e9dcc6; color: #1c1310; transform: rotate(-1.5deg);
+    font: 19px/1.75 'Special Elite', 'Courier New', monospace;
+    box-shadow: 0 25px 60px rgba(0,0,0,.6), inset 0 0 60px rgba(120,80,40,.25);
+  }
+  .note p:first-child { font-size: 26px; line-height: 1.35; color: #9e1d12; }
+  .note p:last-child { margin: 0; }
+
+  .producers { background: #1a1210; padding: 72px 0 80px; }
+  .producers .wrap { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+  .producers h2 { font-size: clamp(36px, 6vw, 60px); color: var(--accent); }
+  .producers .lede { margin-top: 14px; font-style: italic; color: #b7a78a; }
+  .producers .rider { color: #e9dcc6; }
+  .producers .btn { margin-top: 26px; background: var(--accent); color: #0e0a09; }
+  @media (max-width: 760px) { .producers .wrap { grid-template-columns: 1fr; gap: 26px; } }
+
+  .tickets { padding: 86px 0 90px; background: #0e0a09; }
+  .tickets .ticket { --ticket: #e9dcc6; }
+  .tickets .sub { color: inherit; }
+
+  .bill { background: #b9241a; color: #f7efdc; padding: 56px 0 60px; }
+  .bill p { margin: 10px 0 0; font-size: 18px; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="/">← The double feature</a>
+  <nav aria-label="Shows">
+    <a href="/knock-knock/" aria-current="page">Knock Knock</a>
+    <a href="/wombo/">Wombo</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1 class="sr-only">Knock Knock</h1>
+    <img src="/assets/kk-hero.jpg" width="1024" height="600"
+         alt="Poster art for Knock Knock: a woman in a slip opens a door on a pair of glowing eyes.">
+    <p class="credit">A one-act horror musical. Book and lyrics by bGame.</p>
+  </section>
+
+  <section class="story" aria-label="The story">
+    <div class="note">
+      <p>When you hear the knock, it's already too late.</p>
+      <p>Eleanor and Freya are going to find the only person who ever got away. It knows they're coming.</p>
+      <p>How will they survive?</p>
+    </div>
+  </section>
+
+  <section class="producers torn">
+    <div class="wrap">
+      <div>
+        <h2>For producers</h2>
+        <p class="lede">Small cast, one set, and an audience that won't stop checking the exits.</p>
+      </div>
+      <div>
+        <ul class="rider">
+          <li><b>Running time</b><span>55 minutes, no interval.</span></li>
+          <li><b>Songs</b><span>You have to scream to believe.</span></li>
+          <li><b>Cast</b><span>Two: Eleanor and Freya. Something else is in the room.</span></li>
+          <li><b>Set</b><span>A single stage that plays every location.</span></li>
+        </ul>
+        <a class="btn" href="#signup">Get the one sheet ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tickets" id="signup">
+    <div class="wrap signup">
+      <div class="ticket">
+        <h2>Tickets aren't on sale yet</h2>
+        <p class="sub">Leave your email and you'll hear the moment they are.</p>
+        <form data-form="Mailing list">
+          <label class="sr-only" for="t-email">Email</label>
+          <input class="field" id="t-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+          <button class="btn" type="submit">Notify me</button>
+        </form>
+        <p class="done" hidden>You're on the list, legend.</p>
+        <p class="err" role="alert"></p>
+      </div>
+
+      <div class="card">
+        <h2>Producers and presenters</h2>
+        <p class="sub">Tell me a little about your venue or festival and I'll send the one sheet.</p>
+        <form data-form="Producer enquiry">
+          <input type="hidden" name="show" value="Knock Knock">
+          <div class="row">
+            <label class="sr-only" for="p-name">Your name</label>
+            <input class="field" id="p-name" name="name" placeholder="Your name" required autocomplete="name">
+            <label class="sr-only" for="p-email">Your email</label>
+            <input class="field" id="p-email" type="email" name="email" placeholder="Your email" required autocomplete="email">
+          </div>
+          <label class="sr-only" for="p-msg">Message</label>
+          <textarea class="field" id="p-msg" name="message" placeholder="Venue, festival, dates you're thinking about…"></textarea>
+          <button class="btn" type="submit">Send it →</button>
+        </form>
+        <div class="done" hidden>
+          Got it, legend.
+          <small>bGame will be in touch soon. In the meantime, here's the one sheet.</small>
+          <a class="btn" href="/assets/Double_Feature_One_Sheet.pdf" download>Download the one sheet</a>
+        </div>
+        <p class="err" role="alert"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bill">
+    <a class="wrap also" href="/wombo/">
+      <img src="/assets/wombo-hero.jpg" width="1024" height="662" alt="" loading="lazy">
+      <div>
+        <h2>Also on the bill: Wombo →</h2>
+        <p>Same night, very different energy. A radioactive wombat, an outback mining town and six EDM bangers.</p>
+      </div>
+    </a>
+  </section>
+</main>
+
+<footer class="foot">
+  Two one-act musicals · one night · knockknockwombo.com<br>
+  Book and lyrics by <span class="name">bGame</span> · <a href="mailto:brian.game@me.com">brian.game@me.com</a>
+</footer>
+
+<script src="/shows.js" defer></script>
+</body>
+</html>

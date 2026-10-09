@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wombo · a one-act EDM comedy musical by bGame</title>
+<meta name="description" content="A beige nobody, a radioactive wombat and one bite from greatness. Wombo is a one-act EDM comedy musical by bGame, the second half of the Knock Knock + Wombo double feature.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Musical Double Feature">
+<meta property="og:title" content="Wombo: a one-act EDM comedy musical">
+<meta property="og:description" content="A beige nobody. A radioactive wombat. One bite from greatness.">
+<meta property="og:url" content="https://www.knockknockwombo.com/wombo/">
+<meta property="og:image" content="https://www.knockknockwombo.com/assets/wombo-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shows.css">
+<style>
+  :root {
+    --bg: #f2e2bd; --ink: #181009; --accent: #aac90f;
+    --dirt: #b9461f; --sun: #f3c623; --tox: #aac90f; --night: #14100b;
+    --grain: .16;
+  }
+
+  .hero { background: var(--night); padding: 30px 0 0; }
+  .hero img { width: min(100%, 1024px); margin-inline: auto; }
+
+  /* Story on sun-bleached paper, set like a programme note. */
+  .story { background: var(--sun); padding: 64px 0 84px; }
+  .story .wrap { max-width: 700px; }
+  .story .kicker { font: 400 clamp(30px, 5vw, 46px)/1.05 Anton, Impact, sans-serif; text-transform: uppercase; margin-bottom: 26px; }
+  .story p { font-size: 21px; }
+  .story .by { font: 15px/1.5 'Special Elite', 'Courier New', monospace; letter-spacing: .05em; margin-top: 26px; }
+
+  /* Cast: a programme's who's who, two columns of names and blurbs. */
+  .company { background: var(--dirt); color: #f7efdc; padding: 74px 0 86px; }
+  .company h2, .songs h2 { font-size: clamp(40px, 7vw, 72px); margin-bottom: 30px; }
+  .cast { display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; margin: 0; }
+  .cast div { padding: 18px 0 20px; border-top: 2px solid rgba(247,239,220,.35); }
+  .cast dt { font: 400 26px/1.1 Anton, Impact, sans-serif; text-transform: uppercase; }
+  .cast dt i { display: block; margin-top: 4px; font: normal 14px/1.3 'Special Elite', 'Courier New', monospace; letter-spacing: .08em; color: var(--sun); }
+  .cast dd { margin: 8px 0 0; font-size: 18px; }
+  @media (max-width: 680px) { .cast { grid-template-columns: 1fr; } }
+
+  /* Setlist like a rave flyer's line-up. */
+  .songs { background: var(--night); color: #f2e2bd; padding: 74px 0 86px; }
+  .songs h2 { color: var(--tox); }
+  .songs ol { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+  .songs li { counter-increment: s; display: grid; grid-template-columns: 74px 1fr; gap: 0 18px; padding: 16px 0; border-bottom: 1px solid #3a3020; }
+  .songs li::before { content: counter(s, decimal-leading-zero); grid-row: span 2; font: 400 46px/1 Anton, Impact, sans-serif; color: var(--tox); }
+  .songs b { font: 400 clamp(22px, 3.2vw, 30px)/1.1 Anton, Impact, sans-serif; text-transform: uppercase; }
+  .songs span { color: #b7a78a; font-size: 17px; }
+  .songs li:hover b { color: var(--sun); }
+  @media (max-width: 560px) { .songs li { grid-template-columns: 52px 1fr; } .songs li::before { font-size: 36px; } }
+
+  .producers { padding: 74px 0 80px; }
+  .producers .wrap { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+  .producers h2 { font-size: clamp(36px, 6vw, 60px); color: var(--dirt); }
+  .producers .lede { margin-top: 14px; font-style: italic; }
+  .producers .btn { margin-top: 26px; background: var(--dirt); }
+  @media (max-width: 760px) { .producers .wrap { grid-template-columns: 1fr; gap: 26px; } }
+
+  .tickets { background: var(--tox); padding: 80px 0 90px; }
+  .tickets .ticket { --ticket: #f7efdc; }
+
+  .bill { background: var(--night); color: #f2e2bd; padding: 56px 0 60px; }
+  .bill p { margin: 10px 0 0; font-size: 18px; }
+  .bar a:hover, .bar [aria-current] { color: var(--tox); }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="/">← The double feature</a>
+  <nav aria-label="Shows">
+    <a href="/knock-knock/">Knock Knock</a>
+    <a href="/wombo/" aria-current="page">Wombo</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1 class="sr-only">Wombo</h1>
+    <img src="/assets/wombo-hero.jpg" width="1024" height="662"
+         alt="Poster art for Wombo: a wombat in a red cape and green sunglasses stands on red dirt in front of a wall of speakers.">
+  </section>
+
+  <section class="story torn" aria-label="The story">
+    <div class="wrap">
+      <p class="kicker">A beige nobody, a radioactive wombat, and one bite from greatness.</p>
+      <p>Charlie Phoenix wanders into Cock Wash Creek, a mining town where Umbra Minerals sells poison as progress. Then a radioactive wombat bites his leg, and beige little Charlie wakes up with claws, a beard, crunchy abs and a new name: Wombo.</p>
+      <p>Mentored by the deadpan, chain-vaping Belladonna, Wombo has to decide what kind of hero he is before someone burns the whole town down. He'd really just prefer a nap.</p>
+      <p class="by">A one-act EDM comedy musical. Book and lyrics by bGame.</p>
+    </div>
+  </section>
+
+  <section class="company torn">
+    <div class="wrap">
+      <h2>Who's who</h2>
+      <dl class="cast">
+        <div><dt>Charlie “Wombo” Phoenix <i>The reluctant hero</i></dt>
+          <dd>Half man, half wombat, fully terrified. Runs on panic, protein shakes and the constant call of a nap.</dd></div>
+        <div><dt>Belladonna <i>The mentor</i></dt>
+          <dd>Deadpan, chain-vaping, and hiding a scar that glows orange. Not your mate. Definitely not.</dd></div>
+        <div><dt>Declan Voss <i>The villain</i></dt>
+          <dd>Linen suit and designer boots, selling “clean coal” with a TED-talk smile.</dd></div>
+        <div><dt>The Wombat <i>Patient zero</i></dt>
+          <dd>Bites first. Naps second. Occasionally produces a perfect cube.</dd></div>
+        <div><dt>Fred the Dingo <i>Always watching</i></dt>
+          <dd>Technically a stuffed animal. The audience will believe, and the growl does the rest.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="songs torn">
+    <div class="wrap">
+      <h2>Six songs</h2>
+      <ol>
+        <li><b>Welcome to Cock Wash Creek</b><span>The whole poisoned town introduces itself.</span></li>
+        <li><b>Another Day, Another Nobody</b><span>Charlie's beige little soul, alone in the dust.</span></li>
+        <li><b>What the Hell Is Happening to Me?</b><span>The transformation panic duet.</span></li>
+        <li><b>Built Like a Brick $#!thouse</b><span>Wombo discovers his glorious, useless new body.</span></li>
+        <li><b>Green Is the New Black</b><span>Declan Voss's greenwashing villain anthem.</span></li>
+        <li><b>No Tomorrow</b><span>The volcanic, burn-it-all-down finale.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="producers">
+    <div class="wrap">
+      <div>
+        <h2>For producers</h2>
+        <p class="lede">A small show with a big mouth, built for festivals and Fringe.</p>
+      </div>
+      <div>
+        <ul class="rider">
+          <li><b>Running time</b><span>45 to 60 minutes, one act.</span></li>
+          <li><b>Music</b><span>Six original EDM comedy songs, including a villain anthem.</span></li>
+          <li><b>Cast</b><span>Five principals plus a flexible townsfolk ensemble.</span></li>
+          <li><b>Set</b><span>A fibro house and a town square. Cheap to build.</span></li>
+        </ul>
+        <a class="btn" href="#signup">Get the one sheet ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tickets" id="signup">
+    <div class="wrap signup">
+      <div class="ticket">
+        <h2>Tickets aren't on sale yet</h2>
+        <p class="sub">Leave your email and you'll hear the moment they are.</p>
+        <form data-form="Mailing list">
+          <label class="sr-only" for="t-email">Email</label>
+          <input class="field" id="t-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+          <button class="btn" type="submit">Notify me</button>
+        </form>
+        <p class="done" hidden>You're on the list, legend.</p>
+        <p class="err" role="alert"></p>
+      </div>
+
+      <div class="card">
+        <h2>Producers and presenters</h2>
+        <p class="sub">Tell me a little about your venue or festival and I'll send the one sheet.</p>
+        <form data-form="Producer enquiry">
+          <input type="hidden" name="show" value="Wombo">
+          <div class="row">
+            <label class="sr-only" for="p-name">Your name</label>
+            <input class="field" id="p-name" name="name" placeholder="Your name" required autocomplete="name">
+            <label class="sr-only" for="p-email">Your email</label>
+            <input class="field" id="p-email" type="email" name="email" placeholder="Your email" required autocomplete="email">
+          </div>
+          <label class="sr-only" for="p-msg">Message</label>
+          <textarea class="field" id="p-msg" name="message" placeholder="Venue, festival, dates you're thinking about…"></textarea>
+          <button class="btn" type="submit">Send it →</button>
+        </form>
+        <div class="done" hidden>
+          Got it, legend.
+          <small>bGame will be in touch soon. In the meantime, here's the one sheet.</small>
+          <a class="btn" href="/assets/Double_Feature_One_Sheet.pdf" download>Download the one sheet</a>
+        </div>
+        <p class="err" role="alert"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bill">
+    <a class="wrap also" href="/knock-knock/">
+      <img src="/assets/kk-hero.jpg" width="1024" height="600" alt="" loading="lazy">
+      <div>
+        <h2>Also on the bill: Knock Knock →</h2>
+        <p>The first feature, and the dark one. When you hear the knock, it's already too late.</p>
+      </div>
+    </a>
+  </section>
+</main>
+
+<footer class="foot">
+  Two one-act musicals · one night · knockknockwombo.com<br>
+  Book and lyrics by <span class="name">bGame</span> · <a href="mailto:brian.game@me.com">brian.game@me.com</a>
+</footer>
+
+<script src="/shows.js" defer></script>
+</body>
+</html>
